@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const createUserSchema = z.object({
-  fist_name: z
+  first_name: z
     .string({ invalid_type_error: "First name must be a string" })
     .min(1, "First name is required"),
   last_name: z
@@ -17,7 +17,7 @@ export const createUserSchema = z.object({
 });
 
 export const updateUserSchema = z.object({
-  fist_name: z
+  first_name: z
     .string({ invalid_type_error: "First name must be a string" })
     .min(2, "First name must be at least 2 characters")
     .optional(),
